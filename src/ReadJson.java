@@ -21,8 +21,8 @@ public class ReadJson {
 
         JSONObject file = new JSONObject();
         file.put("Full Name", "Ritu Sharma");
-        file.put("Roll No.", new Integer(1704310046));
-        file.put("Tution Fees", new Double(65400));
+        file.put("Roll No.", 1704310046);
+        file.put("Tution Fees", 65400);
 
 
         // To print in JSON format.
@@ -68,20 +68,23 @@ public class ReadJson {
 
         JSONParser parser = new JSONParser();
         //System.out.println(str);
-        org.json.simple.JSONObject jsonObject = (org.json.simple.JSONObject) parser.parse(totlaJson);
+        org.json.simple.JSONArray jsonObject = (org.json.simple.JSONArray) parser.parse(totlaJson);
         System.out.println(jsonObject);
 
         try {
 
-            String name = (String)jsonObject.get("name");
+            //String name = (String)jsonObject.get(0);
+            System.out.println(jsonObject.get(0));
 
-            org.json.simple.JSONArray msg = (org.json.simple.JSONArray) jsonObject.get("films");
-            int n =   msg.size(); //(msg).length();
-            for (int i = 0; i < n; ++i) {
-                String test =(String) msg.get(i);
-                System.out.println(test);
-                // System.out.println(person.getInt("key"));
-            }
+            org.json.simple.JSONObject msg = (org.json.simple.JSONObject) jsonObject.get(0);
+            System.out.println(msg.get("image"));
+            System.out.println(msg.get("image"));
+//            int n =   msg.size(); //(msg).length();
+//            for (int i = 0; i < n; ++i) {
+//                String test =(String) msg.get(i);
+//                System.out.println(test);
+//                // System.out.println(person.getInt("key"));
+//            }
 
             //System.out.println(name);
         }
