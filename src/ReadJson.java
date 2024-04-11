@@ -20,9 +20,9 @@ public class ReadJson {
         // which is a subclass of java.util.HashMap.
 
         JSONObject file = new JSONObject();
-        file.put("Full Name", "Ritu Sharma");
-        file.put("Roll No.", 1704310046);
-        file.put("Tution Fees", 65400);
+       // file.put("Full Name", "Ritu Sharma");
+       // file.put("Roll No.", 1704310046);
+       // file.put("Tution Fees", 65400);
 
 
         // To print in JSON format.
